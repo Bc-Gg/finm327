@@ -6,7 +6,6 @@ BINDIR = bin
 SOURCES = $(SRCDIR)/main.cpp $(SRCDIR)/matrix_kernal.cpp
 OBJECTS = $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
-# 默认目标是 release（O3）
 all: release
 
 debug: CXXFLAGS = -std=c++17 -Wall -Wextra -I$(INCDIR) -g -O0

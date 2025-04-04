@@ -68,16 +68,20 @@ int main()
     std::cout << "3. Cache Locality Analysis" << std::endl;
     std::cout << std::endl;
 
+    // 4. Memory Alignment
+    std::cout << "4. Memory Alignment" << std::endl;
+    std::cout << std::endl;
+
     for (int size: sizes) {
         std::cout << "===== Unaligned Benchmark =====" << std::endl;
         benchmark(size, runs, "matrix");
 
-        std::cout << "===== Aligned Benchmark =====" << std::endl;
+        std::cout << "===== Aligned =====" << std::endl;
         benchmark_aligned(size, runs);
     }
 
-    // 4. Inlining
-    std::cout << "4. Inlining" << std::endl;
+    // 5. Inlining
+    std::cout << "5. Inlining" << std::endl;
     std::cout << std::endl;
 
     std::random_device rd;
@@ -151,8 +155,9 @@ int main()
     // make
     // ./bin/program
 
-    // 5. Profiling
-    std::cout << "5. Profiling" << std::endl;
+    // 6. Profiling
+    std::cout << "6. Profiling" << std::endl;
     std::cout << std::endl;
 
 }
+
