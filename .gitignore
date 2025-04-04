@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# hide .idea folder
+.idea/
+.vscode/

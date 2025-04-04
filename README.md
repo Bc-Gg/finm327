@@ -16,6 +16,14 @@ make
 ./bin/program
 ```
 
+If you want to open debug mode, you can type `make debug` in the terminal.
+```bash
+make debug
+./bin/program
+```
+
+
+
 ## matrix computation kernal
 In this module we try to implement four functions regarding matrix multiplication.
 
@@ -32,17 +40,17 @@ In this module we try to implement four functions regarding matrix multiplicatio
    In matrix-vector multiplication, the row-major version was faster due to contiguous access, while the column-major version showed poorer performance due to strided access. 
    In matrix-matrix multiplication, transposing matrix B enabled row-wise access, reducing cache misses and improving performance over the naive version.
 
-3. Describe how CPU caches work (L1, L2, L3) and explain the concepts of temporal and spatial locality. 
+3. Describe how CPU caches work (L1, L2, L3) and explain the concepts of temporal and spatial locality.
    How did you try to exploit these concepts in your optimizations?
 
    CPU caches (L1, L2, L3) are fast memory layers closer to the CPU, with L1 being the smallest and fastest.
    Temporal locality means reusing the same data soon; spatial locality means accessing nearby data.
    We exploited these by reordering loops and using blocking to access memory in a sequential and reusable pattern.
 
-4. What is memory alignment, and why is it important for performance? 
+4. What is memory alignment, and why is it important for performance?
    Did you observe a significant performance difference between aligned and unaligned memory in your experiments? Explain your findings.
 
-   Memory alignment means placing data at memory addresses that are multiples of a specific boundary (e.g., 64 bytes). 
+   Memory alignment means placing data at memory addresses that are multiples of a specific boundary (e.g., 64 bytes).
    It helps the CPU load data more efficiently and enables vectorized instructions. 
    In our experiments, alignment showed minimal performance difference, likely because the data sizes and access patterns did not heavily stress alignment-sensitive operations.
 
@@ -59,10 +67,10 @@ In this module we try to implement four functions regarding matrix multiplicatio
 
    需要填入！！！
 
-7. Reflect on the teamwork aspect of this assignment. 
-   How did dividing the initial implementation tasks and then collaborating on analysis and optimization work? 
+7. Reflect on the teamwork aspect of this assignment.
+   How did dividing the initial implementation tasks and then collaborating on analysis and optimization work?
    What were the challenges and benefits of this approach?
 
    Dividing initial implementation tasks allowed parallel progress and saved time. 
-   Collaborating on analysis and optimization helped combine different insights and catch performance issues more effectively. 
+   Collaborating on analysis and optimization helped combine different insights and catch performance issues more effectively.
    The main challenge was ensuring consistent coding styles and merging ideas, but the shared understanding built during optimization was a major benefit.
