@@ -70,6 +70,7 @@ In this module we try to implement four functions regarding matrix multiplicatio
 
 6. Based on your profiling experience, what were the main performance bottlenecks in your initial implementations? 
    How did your profiling results guide your optimization efforts?
+
    Function:multiply_mm_transposed_b and multiply_mm_naive use too much time, we can replace naive implementations with optimized algorithms or libraries or parallelize matrix operations using OpenMP or std::thread.
    And use -O3 to optimize the code. Using high-performance libraries like BLAS or LAPACK can also significantly improve performance.
 
