@@ -21,7 +21,13 @@ If you want to open debug mode, you can type `make debug` in the terminal.
 make debug
 ./bin/program
 ```
-
+For profiling we choose to use gprof as the profiling function in Linux platform.
+You can use docker / Ubuntu or any arbitrary Linux platform to run the code.
+```bash
+make profile
+./bin/program_profile
+gprof ./bin/program_profile gmon.out > analysis.txt
+```
 
 
 ## matrix computation kernal
@@ -64,8 +70,8 @@ In this module we try to implement four functions regarding matrix multiplicatio
 
 6. Based on your profiling experience, what were the main performance bottlenecks in your initial implementations? 
    How did your profiling results guide your optimization efforts?
-
-   需要填入！！！
+   Function:multiply_mm_transposed_b and multiply_mm_naive use too much time, we can replace naive implementations with optimized algorithms or libraries or parallelize matrix operations using OpenMP or std::thread.
+   And use -O3 to optimize the code. Using high-performance libraries like BLAS or LAPACK can also significantly improve performance.
 
 7. Reflect on the teamwork aspect of this assignment.
    How did dividing the initial implementation tasks and then collaborating on analysis and optimization work?
